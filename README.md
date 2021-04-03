@@ -17,9 +17,15 @@ x  + 3x + 9
 
 Requires the Haskell tool [Stack](https://docs.haskellstack.org/en/stable/README/).
 
-```bash
+```
 stack build
 stack exec polynomial-guesser
+```
+
+### Running tests
+
+```
+stack test
 ```
 
 ## References

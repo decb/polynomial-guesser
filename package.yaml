@@ -15,11 +15,28 @@ ghc-options:
   - -Wno-name-shadowing
   - -Wno-type-defaults
 
+library:
+  source-dirs: src
+
 executables:
   polynomial-guesser:
     main: Main.hs
-    source-dirs: src
+    source-dirs: app
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
+    dependencies:
+      - polynomial-guesser
+
+tests:
+  polynomial-guesser-tests:
+    main: Main.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - polynomial-guesser
+      - hspec

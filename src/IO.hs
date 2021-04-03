@@ -1,20 +1,12 @@
-module Main
-  ( main
+module IO
+  ( promptUser
+  , showPolynomial
   ) where
 
 import           Data.List       (intercalate)
 import           Numeric.Natural (Natural)
 import           System.IO       (hFlush, stdout)
 import           Text.Read       (readMaybe)
-
-import           Guess           (guess)
-
-main :: IO ()
-main = do
-  a <- promptUser 1
-  b <- promptUser (a + 1)
-  let result = guess b (a + 1)
-  putStr $ showPolynomial result
 
 promptUser :: Natural -> IO Natural
 promptUser x = do
