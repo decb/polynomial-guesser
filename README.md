@@ -8,7 +8,9 @@ For example, given _x<sup>2</sup> + 3x + 9_:
 $ polynomial-guesser
 What is the value for x = 1? 13
 What is the value for x = 14? 247
-[9,3,1]
+Your polynomial is:
+ 2
+x  + 3x + 9
 ```
 
 ## Installing and running
@@ -22,4 +24,4 @@ stack exec polynomial-guesser
 
 ## References
 
-1. Math &cap; Programming, _Learning a single-variable polynomial, or the power of adaptive queries_
+1. [Math &cap; Programming, _Learning a single-variable polynomial, or the power of adaptive queries_](https://jeremykun.com/2014/11/18/learning-a-single-variable-polynomial-or-the-power-of-adaptive-queries/)

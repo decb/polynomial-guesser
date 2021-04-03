@@ -2,6 +2,7 @@ module Main
   ( main
   ) where
 
+import           Data.List       (intercalate)
 import           Numeric.Natural (Natural)
 import           System.IO       (hFlush, stdout)
 import           Text.Read       (readMaybe)
@@ -13,7 +14,7 @@ main = do
   a <- promptUser 1
   b <- promptUser (a + 1)
   let result = guess b (a + 1)
-  putStrLn $ showPolynomial result
+  putStr $ showPolynomial result
 
 promptUser :: Natural -> IO Natural
 promptUser x = do
@@ -24,4 +25,19 @@ promptUser x = do
     Nothing -> promptUser x
 
 showPolynomial :: [Natural] -> String
-showPolynomial = show
+showPolynomial [] = "0"
+showPolynomial cs = go (zip cs [0 ..]) [] []
+  where
+    go [] ps ys = unlines [intercalate "   " ps, intercalate " + " ys]
+    go ((c, d):cs) ps xs =
+      let x
+            | d == 0 = show c
+            | c == 1 = "x"
+            | otherwise = show c ++ "x"
+          p
+            | d < 2 = ""
+            | otherwise = show d
+       in go cs ((spaces (length x) ++ p) : ps) ((x ++ spaces (length p)) : xs)
+
+spaces :: Int -> String
+spaces n = replicate n ' '
