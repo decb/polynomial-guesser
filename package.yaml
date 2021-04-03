@@ -1,4 +1,4 @@
-name: polynomial-adaptive-queries
+name: polynomial-guesser
 version: 0.1.0.0
 
 dependencies:
@@ -16,7 +16,7 @@ ghc-options:
   - -Wno-type-defaults
 
 executables:
-  polynomial-adaptive-queries:
+  polynomial-guesser:
     main: Main.hs
     source-dirs: src
     ghc-options:

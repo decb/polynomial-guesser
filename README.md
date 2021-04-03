@@ -1,1 +1,1 @@
-# polynomial-adaptive-queries
+# polynomial-guesser
