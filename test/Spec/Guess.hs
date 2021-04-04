@@ -1,4 +1,4 @@
-module GuessSpec
+module Spec.Guess
   ( spec
   ) where
 

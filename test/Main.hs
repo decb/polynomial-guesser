@@ -2,11 +2,11 @@ module Main where
 
 import           Test.Hspec (hspec)
 
-import qualified GuessSpec
-import qualified IOSpec
+import qualified Spec.Guess as Guess
+import qualified Spec.IO    as IO
 
 main :: IO ()
 main =
   hspec $ do
-    GuessSpec.spec
-    IOSpec.spec
+    Guess.spec
+    IO.spec

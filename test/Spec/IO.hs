@@ -1,4 +1,4 @@
-module IOSpec
+module Spec.IO
   ( spec
   ) where
 
