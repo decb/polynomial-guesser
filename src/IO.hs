@@ -17,7 +17,8 @@ promptUser x = do
     Nothing -> promptUser x
 
 showPolynomial :: [Natural] -> String
-showPolynomial [] = "\n0\n"
+showPolynomial cs
+  | null cs || all (== 0) cs = "\n0\n"
 showPolynomial cs = go (zip cs [0 ..]) [] []
   where
     go [] ps ys =
