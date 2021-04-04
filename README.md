@@ -13,7 +13,7 @@ Your polynomial is:
 x  + 3x + 9
 ```
 
-## Installing and running
+## Building and running
 
 Requires the Haskell tool [Stack](https://docs.haskellstack.org/en/stable/README/).
 

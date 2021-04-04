@@ -8,6 +8,8 @@ import           Numeric.Natural (Natural)
 import           System.IO       (hFlush, stdout)
 import           Text.Read       (readMaybe)
 
+import           Polynomial      (Polynomial (coefficients))
+
 promptUser :: Natural -> IO Natural
 promptUser x = do
   putStr ("What is the value of your polynomial for x = " <> show x <> "? ")
@@ -16,10 +18,10 @@ promptUser x = do
     Just n  -> return n
     Nothing -> promptUser x
 
-showPolynomial :: [Natural] -> String
-showPolynomial cs
+showPolynomial :: Polynomial -> String
+showPolynomial (coefficients -> cs)
   | null cs || all (== 0) cs = "\n0\n"
-showPolynomial cs = go (zip cs [0 ..]) [] []
+showPolynomial (coefficients -> cs) = go (zip cs [0 ..]) [] []
   where
     go [] ps ys =
       unlines

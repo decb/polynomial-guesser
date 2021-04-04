@@ -3,6 +3,11 @@ version: 0.1.0.0
 
 dependencies:
   - base >= 4.7 && < 5
+  - QuickCheck
+  - quickcheck-instances
+
+default-extensions:
+  - ViewPatterns
 
 ghc-options:
   - -O0
