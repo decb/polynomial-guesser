@@ -2,7 +2,7 @@
 
 Think of a polynomial in _x_ of arbitrary degree with non-negative integer coefficients, this program can guess it given just two points on the polynomial.
 
-For example, given _x<sup>2</sup> + 3x + 9_:
+For example, take _x<sup>2</sup> + 3x + 9_:
 
 ```
 $ polynomial-guesser

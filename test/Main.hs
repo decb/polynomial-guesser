@@ -1,7 +1,8 @@
 module Main where
 
-import           Test.Hspec
+import           Test.Hspec (hspec)
+
+import qualified GuessSpec
 
 main :: IO ()
-main = do
-  hspec $ undefined
+main = hspec $ do GuessSpec.spec
